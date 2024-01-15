@@ -1,0 +1,92 @@
+.car-game {
+    position: relative;
+    height: 730px;
+    background-image: url(../images/street.jpg);
+    background-position: center;
+    background-repeat: repeat-x;
+}
+
+.race-lamp {
+    display: flex;
+}
+
+.light {
+    border: 5px solid black;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    transition: background-color 0.1s linear
+}
+
+.btn {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    border-radius: 3px;
+    color: white;
+    margin-left: 15px;
+    width: 70px;
+}
+
+.fuel {
+    background-color: green;
+    width: 120px;
+    height: 10px;
+}
+
+.finish-line {
+    position: absolute;
+    background-color: yellow;
+    height: 362px;
+    width: 15px;
+    top: 185px;
+    right: 50px;
+}
+
+.car {
+    position: relative;
+    width: 300px;
+    display: block;
+    padding-top: 25px;
+    transition: left 0.2s ease-out;
+    left: 0px;
+}
+
+.car_runing {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(0, -1px, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(0, 1px, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(0, -1px, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(0, 1px, 0);
+    }
+}
+
+#restart-game {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    bottom: 0;
+    left: 50%;
+}
